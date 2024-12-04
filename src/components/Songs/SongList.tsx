@@ -1,12 +1,13 @@
-import Song, { SongType } from "./Song/Song";
+import Song from "./Song/Song";
+import { SongType } from "../../data/SongData";
 
-const SongList = ({ songs }: {songs:SongType[]}) => {
+const SongList = ({ songs }: SongListType) => {
   return (
     <>
       <h1>List of my favorite songs</h1>
       <ul>
-        {songs.map((song: SongType) => (
-          <Song artist={song.artist} title={song.title} />
+        {songs.map((song: SongType, index) => (
+          <Song key={index} artist={song.artist} title={song.title} />
         ))}
       </ul>
     </>
@@ -14,4 +15,4 @@ const SongList = ({ songs }: {songs:SongType[]}) => {
 };
 
 export default SongList;
-// export type SongListType = { songs: SongType[] };
+type SongListType = { songs: SongType[] }; // SongListProps

@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.bordered {
+  border: 2em;
+  border-color: aqua;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
